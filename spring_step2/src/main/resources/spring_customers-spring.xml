@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="customerService"
+		class="spring_step2.customers.dao.CustomerService" />
+
+	<bean id="employeesService"
+		class="spring_step2.customers.Service.EmployeesService">
+
+		<property name="employees">
+			<list>
+				<value>Cheney.</value>
+				<value>Eloy.</value>
+				<value>Jasper.</value>
+				<value>Dillon.</value>
+			</list>
+		</property>
+
+	</bean>
+	<bean id="administratorsService"
+		class="spring_step2.customers.integeration.AdministratorsService">
+
+		<property name="administrators">
+			<map>
+				<entry>
+					<key>
+						<value>dev</value>
+					</key>
+					<value>cheny@springPjt.org</value>
+				</entry>
+				<entry>
+					<key>
+						<value>real</value>
+					</key>
+					<value>Jsper@springPjt.org</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="CustomerDao"
+		class="spring_step2.customers.dao.CustomerDao">
+
+		<property name="dbInfo">
+			<map>
+				<entry>
+					<key>
+						<value>dev</value>
+					</key>
+					<ref bean="dbConnectionInfoDev" />
+				</entry>
+				<entry>
+					<key>
+						<value>real</value>
+					</key>
+					<ref bean="dbConnectionInfoReal" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+</beans>
+
