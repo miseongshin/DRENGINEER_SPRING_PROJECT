@@ -15,7 +15,7 @@
 	</bean>
 
 	<bean id="dbConnectionInfoReal"
-		class="spring_step2.customers.integration.DataBaseConnectionInfoRea;">
+		class="spring_step2.customers.integration.DataBaseConnectionInfoReal">
 		<property name="jdbcUrl"
 			value="jdbc:oracle:thin:XXX.XXX.XXX:11000:xe" />
 		<property name="userId" value="scott" />

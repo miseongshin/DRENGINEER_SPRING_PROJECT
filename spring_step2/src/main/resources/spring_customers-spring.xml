@@ -4,11 +4,9 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="customerService"
-		class="spring_step2.customers.dao.CustomerService" />
 
 	<bean id="employeesService"
-		class="spring_step2.customers.Service.EmployeesService">
+		class="spring_step2.customers.service.EmployeesService">
 
 		<property name="employees">
 			<list>
@@ -21,8 +19,7 @@
 
 	</bean>
 	<bean id="administratorsService"
-		class="spring_step2.customers.integeration.AdministratorsService">
-
+		class="spring_step2.customers.service.AdministratorsService">
 		<property name="administrators">
 			<map>
 				<entry>
@@ -41,6 +38,10 @@
 		</property>
 	</bean>
 
+<!--   	<bean id="CustomerService" class="spring_step2.customers.service.CustomerSevice"/>
+  	<bean id="CustomerService1" class="spring_step2.customers.service.CustomerSevice"/>
+  	<bean id="CustomerService2" class="spring_step2.customers.service.CustomerSevice"/>
+  	 -->
 	<bean id="CustomerDao"
 		class="spring_step2.customers.dao.CustomerDao">
 

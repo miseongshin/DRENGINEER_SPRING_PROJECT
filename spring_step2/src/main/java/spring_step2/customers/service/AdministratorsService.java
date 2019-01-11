@@ -1,13 +1,14 @@
 package spring_step2.customers.service;
 
-import java.util.List;
 import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Required;
 
 public class AdministratorsService {
 
-	Map<String, String> administrators;
+	private Map<String, String> administrators;
 
-	public void printAdministrators (List<String> employees, Map<String, String> administrators) {
+	public void printAdministrators () {
 		System.out.println(this.toString());
 	}
 
@@ -16,10 +17,14 @@ public class AdministratorsService {
 		return "AdministratorsService [" + administrators.toString() + "]";
 	}
 
-	public void setDevelopers(Map<String, String> administrators) {
-
-		this.administrators = administrators;
-
+	@Required
+	public Map<String, String> getAdministrators() {
+		return administrators;
 	}
+
+	public void setAdministrators(Map<String, String> administrators) {
+		this.administrators = administrators;
+	}
+	
 
 }

@@ -1,13 +1,24 @@
 package spring_step2.customers.service;
 
-import java.util.List;
-import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import spring_step2.customers.dao.CustomerDao;
 
 public class CustomerService {
 
-	public void printCustomer(List<String> employees, Map<String, String> administrators) {
-		System.out.println("CustomerService" + this.toString());
+	private CustomerDao customerDao;
+	
+	@Autowired
+	public CustomerService(CustomerDao customerDao) {
 	}
 
+	public CustomerDao getCustomerDao() {
+		return customerDao;
+	}
 
+	public void setCustomerDao(CustomerDao customerDao) {
+		this.customerDao = customerDao;
+	}
+	
+	
 }

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="studentDao"
+		class="spring_step3.ems.member.dao.StudentDao" />
+
+	<bean id="registerService"
+		class="spring_step3.ems.member.service.StudentRegisterService">
+		<constructor-arg ref="studentDao"></constructor-arg>
+	</bean>
+
+	<bean id="modifyService"
+		class="spring_step3.ems.member.service.StudentModifyService">
+		<constructor-arg ref="studentDao"></constructor-arg>
+	</bean>
+
+	<bean id="deleteService"
+		class="spring_step3.ems.member.service.StudentDeleteService">
+		<constructor-arg ref="studentDao"></constructor-arg>
+	</bean>
+
+	<bean id="selectService"
+		class="spring_step3.ems.member.service.StudentSelectService">
+		<constructor-arg ref="studentDao"></constructor-arg>
+	</bean>
+
+	<bean id="allSelectService"
+		class="spring_step3.ems.member.service.StudentAllSelectService">
+		<constructor-arg ref="studentDao"></constructor-arg>
+	</bean>
+
+	<bean id="dbConnectionInfoDev"
+		class="spring_step3.ems.member.DataBaseConnectionInfo">
+		<property name="jdbcUrl"
+			value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="userId" value="scott" />
+		<property name="userPw" value="tiger" />
+	</bean>
+
+	<bean id="dbConnectionInfoReal"
+		class="spring_step3.ems.member.DataBaseConnectionInfo">
+		<property name="jdbcUrl"
+			value="jdbc:oracle:thin:XXX.XXX.XXX:11000:xe" />
+		<property name="userId" value="scott" />
+		<property name="userPw" value="tiger" />
+	</bean>
+
+	<bean id="informationService"
+		class="spring_step3.ems.member.service.EMSInformationService">
+		<property name="info">
+			<value>Education Managemet System program was deeloped in 2015
+			</value>
+		</property>
+		<property name="copyRight">
+			<value>COPYRIGHT(C) 2015 EMS CO., LTD. ALL RIGHT RESERVED</value>
+		</property>
+		<property name="ver">
+			<value>The version is 1.0</value>
+		</property>
+		<property name="sYear">
+			<value>2015</value>
+		</property>
+		<property name="sMonth">
+			<value>1</value>
+		</property>
+		<property name="sDay">
+			<value>1</value>
+		</property>
+		<property name="administrators">
+			<map>
+				<entry>
+					<key>
+						<value>cheny</value>
+					</key>
+					<value>cheny@springPjt.org</value>
+				</entry>
+				<entry>
+					<key>
+						<value>Jsper</value>
+					</key>
+					<value>Jsper@springPjt.org</value>
+				</entry>
+			</map>
+		</property>
+		<property name="employees">
+			<list>
+				<value>Cheney.</value>
+				<value>Eloy.</value>
+				<value>Jasper.</value>
+				<value>Dillon.</value>
+			</list>
+		</property>
+
+		<property name="dbInfo">
+			<map>
+				<entry>
+					<key>
+						<value>dev</value>
+					</key>
+					<ref bean="dbConnectionInfoDev" />
+				</entry>
+				<entry>
+					<key>
+						<value>real</value>
+					</key>
+					<ref bean="dbConnectionInfoReal" />
+				</entry>
+			</map>
+		</property>s
+	</bean>
+
+</beans>
+
