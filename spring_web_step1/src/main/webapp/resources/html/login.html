@@ -2,9 +2,17 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>
 	<h1>login</h1>
+	<form action="/spring/member/memberLogin" method="Post">
+		ID: <input type="text" name="memberId"> <br/>
+		Pw: <input type="password" name="memberPw"> 
+		<input type="submit" value="Login">
+	     <input type="reset" value="Cancel">
+	</form>
+	
+	<a href="/spring/resources/html/memberJoin.html">Join</a>
 </body>
 </html>

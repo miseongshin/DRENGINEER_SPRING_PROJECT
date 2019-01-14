@@ -25,5 +25,15 @@
 	
 	<!-- <beans:bean id="memberService" class="com.drengineer.spring.member.service.MemberService"/> >> @Service -->
 	
+	<interceptors>
+		<interceptor>
+			<mapping path="/member/memberInfo"/>
+		<!-- 	<mapping path="/member/**"/>
+			<exclude-mapping path="/member/login"/> -->
+			
+			<beans:bean class="com.drengineer.spring.member.interceptor.MemberLoginInterceptor"/>
+		</interceptor>
+	</interceptors>
+	
 	
 </beans:beans>

@@ -1,18 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Login OK</title>
+<title>MemberInfo</title>
 </head>
 <body>
-	<h1>memberLoginOk</h1>
-	ID: ${member.memberId }<br/>
-	PW: ${member.memberPw }<br/>
-	IP: ${memberIp}
+	<h1>MemberInfo</h1>
 	
-	    
-    <a href="/spring/member/memberJoin">LOGOUT</a>
+	ID: ${member.memberId }<br/>
+    
+	
 </body>
 </html>
