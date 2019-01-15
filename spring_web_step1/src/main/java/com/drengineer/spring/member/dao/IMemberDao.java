@@ -4,7 +4,7 @@ import com.drengineer.spring.member.Member;
 
 public interface IMemberDao {
 	
-	void memberInsert(Member member);
+	int memberInsert(Member member);
 	void memberSelect(Member member);
 	//void memberUpdate();
 	//void memberDelete();
