@@ -14,16 +14,17 @@ public class MemberLoginInterceptor extends HandlerInterceptorAdapter {
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
-		HttpSession session = request.getSession(false);
-		if (session != null) {
-			Object object = (Member) session.getAttribute("member");
-			if (object != null) {
-				return true;
+		
+			HttpSession session = request.getSession(false);
+			if (session != null) {
+				Object object = (Member) session.getAttribute("member");
+				if (object != null) {
+					return super.preHandle(request, response, handler);
+				}
 			}
-		}
 
-		response.sendRedirect("redirect:/spring/resources/html/memberLogin.html");
-		return false;
+			response.sendRedirect("redirect:/spring/resources/html/memberLogin.html");
+			return false;
 	}
 
 	@Override

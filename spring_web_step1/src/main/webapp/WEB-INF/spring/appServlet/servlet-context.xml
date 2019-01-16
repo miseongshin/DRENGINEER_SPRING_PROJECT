@@ -27,10 +27,9 @@
 	
 	<interceptors>
 		<interceptor>
-			<mapping path="/member/memberInfo"/>
+			<mapping path="/spring/member/memberInfo"/>
 		<!-- 	<mapping path="/member/**"/>
 			<exclude-mapping path="/member/login"/> -->
-			
 			<beans:bean class="com.drengineer.spring.member.interceptor.MemberLoginInterceptor"/>
 		</interceptor>
 	</interceptors>

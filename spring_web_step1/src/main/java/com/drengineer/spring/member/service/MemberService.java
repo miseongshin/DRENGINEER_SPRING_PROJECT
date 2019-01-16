@@ -17,7 +17,7 @@ public class MemberService implements IMemberService{
 	@Override
 	public void memberRegist(Member member) {
 		
-		memberDao.memberInsert(member);
+		System.out.println(memberDao.memberInsert(member));
 	}
 
 	@Override

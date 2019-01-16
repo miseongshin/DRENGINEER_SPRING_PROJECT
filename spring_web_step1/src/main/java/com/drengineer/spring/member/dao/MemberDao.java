@@ -14,7 +14,7 @@ import com.drengineer.spring.member.Member;
 //@Repository
 public class MemberDao implements IMemberDao {
 	private String url = "org.mariadb.jdbc.Driver";
-	private String driver = "jdbc:mariadb://localhost:3306/springtest";
+	private String driver = "jdbc:mysql://localhost:3306/springtest";
 	private String user = "testuser";
 	private String password = "1234";
 
