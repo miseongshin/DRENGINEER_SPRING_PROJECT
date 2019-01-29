@@ -6,5 +6,5 @@ public interface IMemberService {
 
 	
 	void memberRegist(Member member);
-	void memberLogin(Member member);
+	Member memberLogin(Member member);
 }

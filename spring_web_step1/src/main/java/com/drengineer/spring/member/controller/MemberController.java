@@ -65,8 +65,11 @@ public class MemberController {
 /*		Cookie historyCookie = new Cookie("loginHistory", getServicerTime(locale).toString());
 		historyCookie.setMaxAge(60 * 60 * 24 * 30);// ms
 		response.addCookie(historyCookie);*/
-
+		
 		ModelAndView mav = new ModelAndView();
+		Member selectMember =  memberService.memberLogin(member);
+		mav.addObject("selectMember",selectMember);
+
 		mav.addObject("memberIp", request.getRemoteAddr());
 		mav.setViewName("memberLoginOk");
 
@@ -92,7 +95,7 @@ public class MemberController {
 		} else {
 			model.addAttribute("member", member);
 		}*/
-
+		
 		return "memberInfo";
 	}
 

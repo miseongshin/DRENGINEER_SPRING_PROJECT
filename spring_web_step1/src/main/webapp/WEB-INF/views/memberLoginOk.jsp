@@ -12,7 +12,7 @@
 	PW: ${member.memberPw }<br/>
 	IP: ${memberIp}
 	
-	    
+	    selected member : ${selectMember.MemberId }/ ${selectMember.MemberPw }
     <a href="/spring/member/memberJoin">LOGOUT</a>
 </body>
 </html>

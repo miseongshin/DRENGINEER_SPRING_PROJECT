@@ -21,9 +21,9 @@ public class MemberService implements IMemberService{
 	}
 
 	@Override
-	public void memberLogin(Member member) {
+	public Member memberLogin(Member member) {
 		
-		memberDao.memberSelect(member);
+		return memberDao.memberSelect(member);
 	}
 
 
