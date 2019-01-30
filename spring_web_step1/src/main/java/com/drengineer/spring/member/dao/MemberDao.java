@@ -24,14 +24,15 @@ public class MemberDao implements IMemberDao {
 	private String user = "testuser";
 	private String password = "1234";
 
-	//jdbc
+//1. jdbc
 	private Connection conn = null;
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
+//2. jdbcTemplate
 	//c3p0
 	//private DriverManagerDataSource dataSource;
-	private DriverManagerDataSource dataSource;	
+	private DriverManagerDataSource dataSource;	 //예외처리 안해도됨
 	private JdbcTemplate jdbcTemplate;
 
 	//jdbc Template 이용

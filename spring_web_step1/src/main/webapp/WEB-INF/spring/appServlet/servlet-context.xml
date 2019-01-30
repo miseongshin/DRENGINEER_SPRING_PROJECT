@@ -33,5 +33,16 @@
 		</interceptor>
 	</interceptors>
 	 -->
+
+	 <beans:bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+	 	<beans:property name="driverClass" value="org.mariadb.jdbc.Driver"/>
+	 	<beans:property name="jdbcUrl" value="jdbc:mariadb://localhost:3306/springtest"/>
+	 	<beans:property name="user" value="testuser"/>
+	 	<beans:property name="password" value="1234"/>
+	 	<beans:property name="maxPoolSize" value="200"/>
+	 	<beans:property name="checkoutTimeout" value="60000"/>
+	 	<beans:property name="maxIdleTime" value="1800"/>
+	 	<beans:property name="idleConnectionTestPeriod" value="600"/>
+	 </beans:bean>
 	
 </beans:beans>
