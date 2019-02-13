@@ -16,3 +16,5 @@ __spring_web_step5__ ApplicationContext(Enviroment-Profile, Properties)
 __spring_web_step6__ ApplicationContext(Message Source)  
 __spring_web_step7__ ApplicationContext(ApplicationEventPublisher)  
 __spring_web_step8__ ApplicationContext(ResourceLoader)  
+__spring_web_step9__ Validation  
+__spring_web_stepa10__ PropertyEditor  
