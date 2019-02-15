@@ -1,4 +1,4 @@
-package com.springstudy.spring_web_stepa11;
+package com.springstudey.spring_web_stepa11;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

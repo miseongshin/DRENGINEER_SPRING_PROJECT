@@ -9,7 +9,7 @@ __spring_step3__ Creating various types of Spring Bean (Java)
 __spring_web_step1__ JDBC Template, Basic MVC, interceptor, MariaDB Connection
 ## Spring test
 __spring_web_step2__ JUnit  
-## Spring Web Core Step  
+## Spring Web Core Step (Spring Boot) 
 __spring_web_step3__ ApplicationContext(Xml, Java, Component)    
 __spring_web_step4__ ApplicationContext(Autowired, Component-scan)  
 __spring_web_step5__ ApplicationContext(Enviroment-Profile, Properties)  
@@ -17,4 +17,8 @@ __spring_web_step6__ ApplicationContext(Message Source)
 __spring_web_step7__ ApplicationContext(ApplicationEventPublisher)  
 __spring_web_step8__ ApplicationContext(ResourceLoader)  
 __spring_web_step9__ Validation  
-__spring_web_stepa10__ PropertyEditor  
+__spring_web_stepa10__ PropertyEditor, Converter, Formatter   
+__spring_web_stepa11__ SpEL  
+__spring_web_stepa12__ AOP  
+__spring_web_stepa13__ Null-Safety(NonNull, NonNullApi)  
+

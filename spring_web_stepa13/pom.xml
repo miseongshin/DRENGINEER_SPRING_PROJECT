@@ -8,10 +8,10 @@
         <version>2.1.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.springStudey</groupId>
-    <artifactId>spring_web_stepa11</artifactId>
+    <groupId>com.springStudy</groupId>
+    <artifactId>spring_web_stepa13</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring_web_stepa11</name>
+    <name>spring_web_stepa13</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
