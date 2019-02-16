@@ -10,7 +10,7 @@ __spring_web_step1__ JDBC Template, Basic MVC, interceptor, MariaDB Connection
 ## Spring test
 __spring_web_step2__ JUnit  
 ## Spring Web Core Step (Spring Boot) 
-__spring_web_step3__ ApplicationContext(Xml, Java, Component)    
+__spring_web_step3__ ApplicationContext(Xml, Java, Component, JUnit)    
 __spring_web_step4__ ApplicationContext(Autowired, Component-scan)  
 __spring_web_step5__ ApplicationContext(Enviroment-Profile, Properties)  
 __spring_web_step6__ ApplicationContext(Message Source)  
